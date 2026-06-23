@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -81,6 +80,7 @@ p{
     margin-bottom:20px;
 }
 
+/* GRID */
 .topics{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
@@ -88,17 +88,34 @@ p{
     margin-top:30px;
 }
 
+/* CARD LINK WRAPPER */
+.card-link{
+    text-decoration:none;
+    color:inherit;
+}
+
+/* CARD */
 .card{
     background:#181818;
     padding:25px;
     border-radius:10px;
     border:1px solid #2d2d2d;
+    transition:0.3s;
+    height:100%;
 }
 
 .card h3{
     margin-bottom:10px;
 }
 
+/* HOVER EFFECT */
+.card:hover{
+    transform:translateY(-8px);
+    border-color:#ffffff;
+    box-shadow:0 10px 25px rgba(0,0,0,0.5);
+}
+
+/* ARTICLE */
 .article{
     background:#181818;
     padding:30px;
@@ -166,25 +183,33 @@ but also to explore how individuals and societies can create positive change.
 
 <div class="topics">
 
+<a href="criminal-psychology.html" class="card-link">
 <div class="card">
 <h3>🧠 Criminal Psychology</h3>
 <p>Understanding the thoughts, motives, and behavioral patterns behind crime.</p>
 </div>
+</a>
 
+<a href="hackers-cybercrime.html" class="card-link">
 <div class="card">
 <h3>💻 Hackers & Cybercrime</h3>
 <p>Exploring digital crime, online behavior, and ethical alternatives.</p>
 </div>
+</a>
 
+<a href="society-environment.html" class="card-link">
 <div class="card">
 <h3>🌍 Society & Environment</h3>
 <p>How family, culture, education, and social conditions influence behavior.</p>
 </div>
+</a>
 
+<a href="rehabilitation-change.html" class="card-link">
 <div class="card">
 <h3>🔄 Rehabilitation & Change</h3>
 <p>Can criminals change? Examining rehabilitation and crime prevention.</p>
 </div>
+</a>
 
 </div>
 
@@ -218,5 +243,3 @@ Beyond the Crime © 2026
 
 </body>
 </html>
-```
-
