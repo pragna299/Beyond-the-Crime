@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Society & Environment</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Georgia, serif;
+    background:#0f0f0f;
+    color:#f5f5f5;
+    line-height:1.8;
+    scroll-behavior:smooth;
+}
+
+/* HEADER */
+header{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+    border-bottom:1px solid #2d2d2d;
+}
+
+header h1{
+    font-size:3rem;
+    margin-bottom:10px;
+}
+
+header p{
+    max-width:800px;
+    color:#cfcfcf;
+}
+
+/* NAV */
+.nav a{
+    display:inline-block;
+    margin:8px;
+    padding:10px 18px;
+    border:1px solid #fff;
+    color:#fff;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.nav a:hover{
+    background:#fff;
+    color:#000;
+}
+
+/* SECTIONS */
+section{
+    max-width:900px;
+    margin:auto;
+    padding:80px 20px;
+    border-bottom:1px solid #222;
+
+    /* cinematic fade start */
+    opacity:0;
+    transform:translateY(40px);
+    transition:all 0.9s ease;
+}
+
+/* when visible */
+section.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* CARDS */
+.card{
+    background:#181818;
+    padding:22px;
+    border-radius:10px;
+    border:1px solid #2d2d2d;
+    margin-bottom:15px;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    border-color:#fff;
+}
+
+/* BACK BUTTON */
+.back{
+    display:inline-block;
+    margin-top:30px;
+    padding:10px 18px;
+    border:1px solid #fff;
+    color:#fff;
+    text-decoration:none;
+}
+
+.back:hover{
+    background:#fff;
+    color:#000;
+}
+
+h2{
+    font-size:2rem;
+    margin-bottom:20px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<h1>🌍 Society & Environment</h1>
+
+<p>
+A cinematic look into how childhood, environment, and emotional experiences silently shape human behavior long before crime ever appears.
+</p>
+
+<div class="nav">
+<a href="#intro">Intro</a>
+<a href="#childhood">Childhood</a>
+<a href="#cases">Case Studies</a>
+<a href="#conclusion">Conclusion</a>
+</div>
+
+</header>
+
+<!-- INTRO -->
+<section id="intro">
+
+<h2>🔍 The Invisible Force That Shapes Behavior</h2>
+
+<div class="card">
+Not all crime begins with a decision. Some of it begins much earlier — in silence, in instability, and in environments where emotional safety never fully existed.
+</div>
+
+<div class="card">
+Before crime becomes action, it is often adaptation — a slow adjustment to a world that does not feel safe enough to trust.
+</div>
+
+</section>
+
+<!-- CHILDHOOD -->
+<section id="childhood">
+
+<h2>🧠 Childhood & Emotional Formation</h2>
+
+<div class="card">
+A child does not learn morality from rules alone. They learn it from repetition, from how they are treated, and from what they experience every day.
+</div>
+
+<div class="card">
+In unstable environments, the mind shifts from asking “what is right?” to “what keeps me safe?”
+</div>
+
+<div class="card">
+When violence or neglect becomes familiar, the brain begins to treat it as normal — even when it is not.
+</div>
+
+<div class="card">
+Emotional neglect creates something invisible but powerful: a feeling of being unseen, even while existing in the world.
+</div>
+
+</section>
+
+<!-- CASE STUDIES -->
+<section id="cases">
+
+<h2>🧠 Real Human Stories</h2>
+
+<div class="card">
+<h3>Richard Ramirez (USA)</h3>
+Richard Ramirez grew up in an environment where violence and instability were present during his early development. Psychologists suggest that repeated exposure to such conditions can desensitize emotional responses over time. Instead of violence feeling shocking, it gradually becomes familiar. His later behavior is often studied as an example of how early environmental exposure can reshape emotional boundaries long before adulthood.
+</div>
+
+<div class="card">
+<h3>Aileen Wuornos (USA)</h3>
+Aileen Wuornos experienced abandonment, instability, and survival-based living from a very young age. Growing up without consistent emotional safety often forces the mind into survival mode. In such states, trust becomes fragile, and emotional decisions are often replaced by immediate survival instincts. Her life reflects how prolonged instability can deeply shape how a person perceives danger, relationships, and the world around them.
+</div>
+
+<div class="card">
+<h3>Charles Manson (USA)</h3>
+Charles Manson’s early life was marked by absence — absence of family stability, absence of belonging, and absence of consistent emotional connection. Psychologically, such environments can create an intense need for identity and belonging. His later influence over groups is often studied as a reflection of how powerful the human need for connection becomes when it is missing for a long time.
+</div>
+
+</section>
+
+<!-- CONCLUSION -->
+<section id="conclusion">
+
+<h2>📌 Conclusion</h2>
+
+<div class="card">
+Society and environment do not directly create criminals. But they shape emotional development — how a person learns to trust, survive, and connect.
+</div>
+
+<div class="card">
+Before crime becomes visible, there is often a long invisible story of adaptation and emotional learning.
+</div>
+
+<div class="card">
+Understanding this is not about blame. It is about understanding how deeply human behavior is connected to the world it grows in.
+</div>
+
+<a class="back" href="index.html">← Back to Explore</a>
+
+</section>
+
+<script>
+// scroll animation
+const sections = document.querySelectorAll("section");
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add("show");
+        }
+    });
+}, { threshold: 0.15 });
+
+sections.forEach(sec => {
+    observer.observe(sec);
+});
+</script>
+
+</body>
+</html>
